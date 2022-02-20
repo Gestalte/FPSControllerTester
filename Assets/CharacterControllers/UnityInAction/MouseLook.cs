@@ -23,6 +23,9 @@ public class MouseLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         Rigidbody body=GetComponent<Rigidbody>();
         if (body != null)
         {
@@ -33,6 +36,22 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+
+        ///* Ensure that the cursor is locked into the screen */
+        if (Cursor.lockState != CursorLockMode.Locked)
+        {
+            if (Input.GetButtonDown("Fire2")) // Changed from Fire1 to work with selection drop-down.
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+        }
+
+
         if (axes == RotationAxes.MouseX)
         {
             transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);

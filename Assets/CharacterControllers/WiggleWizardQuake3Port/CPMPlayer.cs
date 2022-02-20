@@ -115,6 +115,12 @@ public class CPMPlayer : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+
         // Do FPS calculation
         frameCount++;
         dt += Time.deltaTime;
@@ -124,11 +130,14 @@ public class CPMPlayer : MonoBehaviour
             frameCount = 0;
             dt -= 1.0f / fpsDisplayRate;
         }
-        /* Ensure that the cursor is locked into the screen */
+
+        ///* Ensure that the cursor is locked into the screen */
         if (Cursor.lockState != CursorLockMode.Locked)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire2")) // Changed from Fire1 to work with selection drop-down.
+            {
                 Cursor.lockState = CursorLockMode.Locked;
+            }
         }
 
         /* Camera rotation stuff, mouse controls this shit */
