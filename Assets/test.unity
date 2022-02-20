@@ -641,6 +641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerControllers:
   - {fileID: 2204280620215117340, guid: b35ca57f5bf1f8548a96af7a40d71bf9, type: 3}
+  - {fileID: 29357461469096931, guid: 96fb276a8cb92074e8bca64177a9372a, type: 3}
 --- !u!4 &1876169529
 Transform:
   m_ObjectHideFlags: 0

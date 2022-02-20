@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(playerControllers[0],new Vector3(0,0,0),Quaternion.identity);
+        Instantiate(playerControllers[1],new Vector3(0,0,0),Quaternion.identity);
     }
 
     // Update is called once per frame
