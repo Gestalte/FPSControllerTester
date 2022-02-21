@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 7911510113811714209}
   - component: {fileID: 7911510113811714208}
   - component: {fileID: 7911510113811714211}
+  - component: {fileID: 5685723722691356201}
   m_Layer: 0
   m_Name: IsaiahKellyQ3CharacterController
   m_TagString: Untagged
@@ -273,3 +274,16 @@ MonoBehaviour:
     MaxSpeed: 1
     Acceleration: 50
     Deceleration: 50
+--- !u!114 &5685723722691356201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911510113811714210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e37add1adf1d874fa801872af6899d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RefreshRate: 4

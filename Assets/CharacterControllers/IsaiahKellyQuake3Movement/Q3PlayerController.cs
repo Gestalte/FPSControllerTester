@@ -64,7 +64,9 @@ namespace Q3Movement
             m_Character = GetComponent<CharacterController>();
 
             if (!m_Camera)
+            {
                 m_Camera = Camera.main;
+            }
 
             m_CamTran = m_Camera.transform;
             m_MouseLook.Init(m_Tran, m_CamTran);
